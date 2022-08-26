@@ -33,4 +33,11 @@ RSpec.describe Shortener do
 
     end
 
+    it "generates a Link record with a unique code" do
+        url = "https://www.favouritewebsite.com/articles/how-to-cook"
+        shortener = Shortener.new(url)
+        link = shortener.generate_short_link
+        expect(link.valid?).to be(true)
+    end
+
 end
