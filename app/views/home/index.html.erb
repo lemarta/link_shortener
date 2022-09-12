@@ -1,0 +1,11 @@
+<h1>Link shortener</h1>
+<p>Shorten your link below</p>
+
+<%= form_with model: @link, remote: false, data: { turbo: false } do |form| %>
+  <%= form.text_field :original_url %> 
+  <%= form.submit %>
+<% end %>
+
+
+
+
